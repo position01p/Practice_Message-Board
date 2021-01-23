@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>留言板</title>
+    <link type="text/css" rel="stylesheet" href="./reset.css">
+    <link type="text/css" rel="stylesheet" href="./style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+    <script src="./Tweet.js" defer></script>
+    <script src="./app.js" defer></script>
+ 
+
+
+</head>
+
+<body>
+    <div id="app">
+        <h1>留言板</h1>
+        <div class="admain">
+            <div class="admain-information">
+                <h3>{{admainName}}</h3>
+            </div> 
+            <div class="admain-bio" v-if="bio">
+                <em>簡歷：</em>{{bio}}
+            </div> 
+        </div>
+
+        <div class="tweets">
+            <tweet  v-for="tweet in tweets" 
+                    v-bind:message="tweet"
+                    v-bind:author="admainName"></tweet>
+        </div>
+
+        <div class="settings">
+            <h2>Settings</h2>
+            <label for=admain>使用者名稱</label>
+            <input type="text" value="" placeholder="使用者名稱" v-model="admainName">
+            <label for="bio">簡歷</label>
+            <textarea type="text" value="" placeholder="請輸入內容" v-model="bio"></textarea>
+            <label for="tweet">新留言</label>
+
+            <div class="new-tweet">
+                <input type="text" value="" placeholder="請輸入內容" v-model="newTweet">
+                <button v-on:click="tweets.push(newTweet)">發送</button>
+            
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

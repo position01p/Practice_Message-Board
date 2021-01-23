@@ -1,0 +1,107 @@
+body{
+    font-family:'Noto Sans TC', sans-serif;
+    padding-bottom: 4rem;
+    font-size: 16px;
+    line-height: 2rem;
+    letter-spacing: 0.6px;
+}
+
+h1{
+    width: 100%;
+    height: auto; 
+    background-color: rgb(202,214,240);
+    color:black;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding:0.75rem;
+}
+
+.admain{
+    width: 100%;
+    height: auto;
+    background-color: rgb(255,255,169);
+    padding: 1.75rem;
+
+}
+
+.admain-information{
+    display: flex;
+    align-items: center;
+    padding-bottom: 2rem;
+}
+
+.admain-information h3{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+em{
+    font-weight: bold;
+}
+
+.tweet{
+    background-color: white;
+    padding: 1.25rem;
+    margin-bottom: 2px;
+    font-size: .875rem;
+}
+
+.tweet h3{
+    font-weight: bold;
+}
+
+.settings{
+    display: flex;
+    flex-direction: column;
+    padding:1.25rem;
+    font-size: 0.875rem;
+    background-color: rgb(255,255,169);
+}
+
+.new-tweet{
+    background-color:rgb(255,255,169) ;
+}
+
+.settings h2{
+    padding-bottom: 1.25rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+}
+
+.settings label{
+    font-weight: bold;
+    font-size:0.825rem;
+}
+
+.settings input,
+.settings textarea,
+.settings button{
+    padding: 1rem;
+    border:1px solid gray;
+}
+
+.settings input,
+.settings textarea{
+    margin-bottom: 0.5rem;
+}
+
+.new-tweet{
+    display: flex;
+}
+.new-tweet input{
+    flex-grow:1;
+    margin-right: 2rem;
+}
+
+.new-tweet button{
+    cursor:pointer;
+    border-radius: 10px;
+    background-color: greenyellow;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+.new-tweet button:hover{
+    background-color: indianred;
+}
